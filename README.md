@@ -54,3 +54,50 @@ This build demos some UIs hosted at [graphql-java-kickstart](https://github.com/
 
 # License
 MIT
+
+
+# {
+#  findAllBooks {
+#    id
+#    title
+#  }
+# }
+
+# {
+#   findAllBooks {
+#     id
+#     isbn
+#     title
+#     pageCount
+#     author {
+#       firstName
+#       lastName
+#     }
+#   }
+# }
+
+
+# mutation {
+#   newBook(
+#     title: "Java: The Complete Reference, Tenth Edition",
+#     isbn: "1259589331",
+#     author: 1) {
+#       id title
+#   }
+# }
+
+# mutation {
+#   updateBookPageCount(pageCount: 1344, id: 3) {
+#     id pageCount
+#   }
+# }
+
+# mutation {
+#   deleteBook(id:3)
+# }
+
+mutation {
+updateBookPageCount(pageCount: 1344, id: 4) {
+id pageCount
+}
+}

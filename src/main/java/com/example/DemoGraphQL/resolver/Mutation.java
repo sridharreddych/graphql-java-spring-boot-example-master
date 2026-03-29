@@ -53,6 +53,6 @@ public class Mutation implements GraphQLMutationResolver {
             bookRepository.save(book);
             return book;
         }
-        throw new BookNotFoundException("The book to be updated was found", id);
+        throw new BookNotFoundException("The book to be updated was not found", id);
     }
 }

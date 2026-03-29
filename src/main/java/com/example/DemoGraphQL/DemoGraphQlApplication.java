@@ -75,7 +75,9 @@ public class DemoGraphQlApplication extends SpringBootServletInitializer {
 			Author author = new Author("Herbert", "Schildt");
 			authorRepository.save(author);
 
-			bookRepository.save(new Book("Java: A Beginner's Guide, Sixth Edition", "0071809252", 728, author));
+			Book book = new Book("Java: A Beginner's Guide, Sixth Edition", "0071809252", 728, author);
+			book.setId(20L);
+			bookRepository.save(book);
 		};
 	}
 }
